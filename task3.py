@@ -61,8 +61,8 @@ def getTopMoviesList(url):
         movies_list.append(dict)
     return movies_list
 all_movies=getTopMoviesList(url="https://www.imdb.com/india/top-rated-indian-movies/")
-# print len(all_movies)
-pprint(all_movies)
+print len(all_movies)
+# pprint(all_movies)
 
 
 def getMovieYear(total_movies):
@@ -80,7 +80,7 @@ def getMovieYear(total_movies):
             new_list2.append(i)
     return new_list2
 get_movie_list=getMovieYear(all_movies)
-print get_movie_list
+# print get_movie_list
 
 def group_by_year(movies,new_list2):
     j=0        # for i in range (decade_year,range_year)
@@ -96,7 +96,7 @@ def group_by_year(movies,new_list2):
         j=j+1
     return year_dict
 year_dict=group_by_year(all_movies,get_movie_list)
-pprint(year_dict)
+# pprint(year_dict)
 
 
 
@@ -116,3 +116,69 @@ def getDecades(year_group,movie_year_group):
     return dictionary
 get_decades=getDecades(year_dict,get_movie_list)
 pprint(get_decades)
+        
+
+
+# print new_list2[i]
+        # if new_list2[i] in dictionary:
+        #    dictionary[decade_year]=
+        #if(new_list[i]['year'])
+        # while new_list2[j]<range_year:
+        #     k=new_list2[j]
+        #     list1.extend(year_dict[k])
+        #     # print j
+        #     j=j+1
+        # dictionary[decade_year]=list1
+        # pprint(list1)
+    # return dictionary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def group_by_decade(decade_year):
+#     index=0  
+#     dictionary={}
+#     year=1960
+#     k=0
+#     while index<len(decade_year):
+#         j=k
+#         decade_list=[]
+#         while j<len(new_list2):
+#             if new_list2[j]<year :              #and new_list2[k]<year:
+#                 decade_list.extend(year_dict[new_list2[j]])
+#             else:               
+#                 break
+#             j=j+1
+#         h=decade_year[index]
+#         dictionary[h]=decade_list
+#         index=index+1
+#         k=j
+#         year=year+10
+#     return dictionary    
+# dacade_year_data=group_by_decade([1950,1960,1970,1980,1990,2000,2010])
+# pprint(dacade_year_data)
