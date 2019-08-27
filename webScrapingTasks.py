@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import json
 from pprint import pprint
 
+
 url="https://www.imdb.com/india/top-rated-indian-movies/"
 def getTopMoviesList(url):
     movie_dict={}
